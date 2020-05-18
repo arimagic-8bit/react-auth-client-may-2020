@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { withAuth } from './../lib/Auth';
+
+// In order to transform this component into a Consumer, first we have to import 
+// the withAuth
+import { withAuth } from './../lib/Auth'; 
 
 class Signup extends Component {
   state = { username: "", password: "" };
@@ -43,4 +46,4 @@ class Signup extends Component {
   }
 }
 
-export default withAuth(Signup);
+export default withAuth(Signup); // Step 2 export the component wrapped inside the withAuth

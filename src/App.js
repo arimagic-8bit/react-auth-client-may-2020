@@ -12,7 +12,7 @@ import PublicRoute from './components/PublicRoute';
 import PrivateRoute from './components/PrivateRoute';
 
 
-
+// Public/Private checks if the user is logged in or not
 
 class App extends Component {
   render() {

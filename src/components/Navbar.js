@@ -14,13 +14,18 @@ class Navbar extends Component {
           <h4>Home</h4>
         </Link>
         {
+          //if user is logged in show the logout button
+          // on click calls the function that is on the provider
           isLoggedIn
             ? <div>
               <p>{user.username}</p>
-              <button onClick={logout}> Logout </button>
+              <button onClick={logout}> Logout </button> 
             </div>
+            //if not
             : (
-              <>
+              // we don't need to create a div for this, so in order to satisfy JSX
+              // we use can use an empty tag
+              <> 
                 <Link to="/login">
                   {' '}
                   <button className="navbar-button">Login</button>{' '}
